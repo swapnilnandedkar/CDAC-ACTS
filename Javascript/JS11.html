@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <script>
+            function calPayment()
+            {
+                var pLoan=parseInt(document.payform.loan.value);
+                var pRate=parseInt(document.payform.roi.value);
+                var pPeriod=parseInt(document.payform.period.value);
+                console.log(pLoan+" "+pRate+" "+pPeriod);
+                var TotalAmount=pLoan+((pLoan*pRate*pPeriod)/100);
+                document.getElementById("pay").value=TotalAmount/(pPeriod*12);
+                document.getElementById("totpay").value=TotalAmount;
+                document.getElementById("totroi").value=TotalAmount-pLoan;
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Enter Loan Information</h2>
+        <form name="payform">
+        <table>
+            
+            <tr>
+                <td>1)Amount of Loan</td>
+                <td><input type="number" name="loan" required></td>
+            </tr>
+            <tr>
+                    <td>2)Annual Percentage Rate of Interest</td>
+                    <td><input type="number" name="roi" required></td>
+    
+            </tr>
+            <tr>
+                    <td>3)Repayment period in years</td>
+                    <td><input type="number" name="period" required></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="compute" onclick="calPayment()">
+                    </td>
+                    </tr>
+                <tr>
+                        <td>4)Your Monthly payment will be</td>
+                        <td><input type="number" disabled id="pay" required></td>
+                    </tr>
+                    <tr>
+                            <td>5)Your total payment will be</td>
+                            <td><input type="number" disabled id="totpay" required></td>
+                        </tr>
+                        <tr>
+                                <td>6)Your total interest payments will be</td>
+                                <td><input type="number"  disabled id="totroi" required></td>
+                            </tr>
+                            
+        </table>
+    </form>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+<script>
+var websites=new Array("www.google.com", "www.msn.com",
+"www.amazon.co.in", "in.answers.yahoo.com", "en.m.wikipedia.com", "codehs.gitbooks.io",
+"www.coderanch.com");
+function a(){
+for(var i=0;i<websites.length;i++)
+{
+	if(websites[i].startsWith("www"))
+	{
+	document.write(websites[i]);
+	}
+}
+}
+</script>
+<body>
+<h1>Names of websites staring from www</h1>
+<input type="button" name="btn" value="WebNames" onclick="a()"  />
+</body>
+</html>

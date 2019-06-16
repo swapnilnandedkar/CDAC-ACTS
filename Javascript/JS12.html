@@ -1,0 +1,48 @@
+<html>
+    <head>
+    <script>
+     function checkValidations()
+     {
+         var uname=document.loginForm.name.value;
+         var pass=document.loginForm.pas.value;
+         str="Successfully loggedin!"
+         console.log("kfbkd "+uname);
+         if(uname == "")
+         {
+            console.log(uname);
+             str="Username Cannot be empty!"
+             document.getElementById("res").innerHTML=str;
+         }
+         else if(pass=="")
+         {
+             str="password cannot be null!";
+             document.getElementById("res").innerHTML=str;
+         }
+         else if(uname.length<6 || uname.length>10)
+         {
+             str="username should be between 6 to 10 characters";
+             document.getElementById("res").innerHTML=str;
+         }
+         else if(!pass.includes("#") || pass.length<8)
+         {
+             str="Password should be greater than 8 characters, must contain a # and atleast one digit.";
+             document.getElementById("res").innerHTML=str;
+         }
+        
+         else
+         {
+             document.getElementById("res").innerHTML=str;
+         }
+     }
+    </script>
+    </head>
+    <body>
+        <form name="loginForm">
+        Enter usename<input type="text" name="name" id="u1"/>
+        Enter Password<input type="text" name="pas" id="p1"/>
+        <input type="button" value="submit" onclick="checkValidations()"/>
+        </form>
+        <hr>
+        <p id="res"></p>
+    </body>
+</html>

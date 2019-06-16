@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script>
+            var array=new Array("John","Steve","Ben","Damon","Ian");
+            function getList()
+            {   var list="<ul>";
+                for(var i=0;i<array.length;i++)
+                {
+                    list+="<li>"+array[i]+"</li>"; 
+                }
+                document.getElementsByTagName("p")[0].innerHTML=list;
+            }
+
+        </script>
+    </head>
+    <body>
+        <input type="button" value="Get List" onclick="getList()">
+        <br>
+        <p ></p>
+    </body>
+</html>

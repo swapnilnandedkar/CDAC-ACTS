@@ -1,0 +1,20 @@
+<html>
+    <script>
+        var names=new Array("munmun","swapnil","rupali","neha","navin");
+        var str="";
+        var temp;
+        function getString(){
+        for(var i=0;i<names.length;i++)
+        {
+            temp=names[i].toUpperCase();
+            str+=(temp+",");
+        }
+        document.getElementById("myId").innerHTML=str;
+        }
+    </script>
+    <body>
+        <h1>Names string in upper case</h1>
+        <input type="button" value="String" onclick="getString()" />
+        <p id="myId"></p>
+    </body>
+</html>

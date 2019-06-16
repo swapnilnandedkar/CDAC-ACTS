@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <script>
+                var arr=new Array("swapnil","munmun","rupali","aniket","hrushikesh");
+                var temp;
+                for(var i=0;i<arr.length;i++)
+                {
+                    temp=arr[i].split("");
+                    arr[i]=temp.reverse().join("");
+                    temp="";
+                }
+                arr.sort();
+                console.log(arr);
+                
+        </script>
+    </head>
+</html>

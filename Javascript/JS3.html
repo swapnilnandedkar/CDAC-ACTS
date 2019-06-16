@@ -1,0 +1,23 @@
+<html>
+    <head>
+    <script>
+    var earr=new Array({empid:1,empname:"Swapnil",empsal:20000},{empid:2,empname:"Munmun",empsal:20001},
+                        {empid:3,empname:"Navin",empsal:20000},{empid:4,empname:"Rupali",empsal:50000});
+        var tab="<table border='2'> ";
+       
+     for(var i=0;i<earr.length;i++)
+        {
+            tab+="<tr><td>"+earr[i].empid+"</td><td>"+earr[i].empname+"</td><td>"+earr[i].empsal+"</td></tr>";
+        }
+        tab+="</table>";
+window.onload=function a()
+{
+document.getElementById("myid").innerHTML=tab;
+}
+
+    </script>
+
+<body>
+        <p id="myid"></p>
+    </body>
+</html>

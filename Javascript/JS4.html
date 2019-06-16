@@ -1,0 +1,50 @@
+<html>
+<head>
+    <script>
+        class Rectangle
+        {
+            Length;
+            Breadth;
+            
+            constructor(a,b)
+            {
+                this.Length=a;
+                this.Breadth=b;
+            }
+            area()
+            {
+              return this.Length*this.Breadth;  
+            }
+            perimeter()
+            {
+                return 2*(this.Length+this.Breadth);
+            }
+        }
+        var rec=new Rectangle(10,20);
+        console.log("Area of Rectangle:"+rec.area());
+        console.log("Perimeter of Rectangle:"+rec.perimeter());
+
+        class Circle
+        {
+            radius;
+            constructor(a)
+            {
+                this.radius=a;
+             }
+            area()
+            {
+              return 3.14*this.radius*this.radius;  
+            }
+            perimeter()
+            {
+                return 2*(3.14*this.radius);
+            }
+        }
+        var cir=new Circle(20);
+        console.log("Area of Circle:"+cir.area());
+        console.log("Perimeter of Circle:"+cir.perimeter());
+        </script>
+</head>
+
+
+</html>

@@ -1,0 +1,35 @@
+<html>
+<head>
+    <script>
+        function calDigSum()
+        {
+            var no=document.getElementById("num").value;
+           
+           if((no>1000) || (no<0))
+           {
+              
+               document.getElementsByTagName("h3")[0].innerHTML="Entered Number is Out of Range";
+           }
+           else
+           {
+               console.log(Math.floor(999/10));
+               var temp=no;
+               var sum=0;
+                while(temp!=0)
+                {
+                    sum+=temp%10;
+                    temp=Math.floor(temp/10);
+                            
+                }
+                document.getElementsByTagName("h3")[0].innerHTML="Sum of digit of "+no+" is "+sum;
+           }
+        }
+
+</script>
+</head>
+<body>
+Enter Positive Number less than 1000 :<input type="number" id="num"><br>
+<input type="button" value="Sum Digit" onclick="calDigSum()">
+<h3> </h3>
+</body>
+</html>

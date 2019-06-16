@@ -1,0 +1,33 @@
+<html>
+    <head>
+    <script>
+        var month=['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        var day1=['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        var dt=new Date();
+        var str="";
+        if(dt.getHours()>=6 && dt.getHours()<=12)
+        {
+                str+="Good Morning";
+        }
+        else if(dt.getHours()>=13 && dt.getHours()<=17)
+        {
+            str+="Good Afternoon";
+        }
+        else if(dt.getHours()>=18 && dt.getHours()<=22)
+        {
+            str+="Good Evening";
+        }
+        
+    //    var str=dt.getDay()+
+       window.onload=function a()
+       {
+        
+        document.getElementById("myid").innerHTML="Today is "+day1[dt.getDay()]+","+dt.getDate()+" "+month[dt.getMonth()]+" "+
+                                dt.getFullYear()+",Welcome,and "+str+" to you"+"<br>";
+        console.log(dt.getDay());
+       }</script>
+</head>
+    <body>
+    <p id="myid"></p>
+    </body>
+</html>
