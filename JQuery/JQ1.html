@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <style>
+            
+            .myclass
+            { height:410px;
+   width:750px;
+                background-image: url("mt.jpg");
+               
+   
+
+            }
+        </style>
+        <script src="./script/jquery-3.4.0.js"></script>
+        <script>
+        $(document).ready(function ()
+        {
+                $('#btn').click(function()
+                {   console.log("jndfjn");
+                    $('#myid').toggleClass("myclass");
+                });
+        }
+        );
+        </script>
+
+    </head>
+    <body>
+        <input type="button" id="btn" value="Toggle" >
+        <p id="myid"></p>
+    </body>
+</html>

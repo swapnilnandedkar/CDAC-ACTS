@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <style>
+            .myclass
+            {
+                width: 500px;
+                height: 600px; 
+            }
+        </style>
+        <script src="./script/jquery-3.4.0.js"></script>
+        <script>
+            $(document).ready(function ()
+                {
+                    $('img').hover(function ()
+                    {
+                        $('img').toggleClass("myclass");
+                    });
+                }
+            );
+
+            </script>
+    </head>
+    <body>
+        <center>
+        <img src="./scooby.jpg" width="300px" height="500px" style="position: relative;"> 
+    </center>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+    <head>
+            <script src="./script/jquery-3.4.0.js"></script>
+        <script>
+                $(document).ready(function()
+                {
+                    $("#tinp").keyup(function()
+                    {
+                        $("#myid").text($("#tinp").val());
+                    });
+                });
+            </script>
+    </head>
+    <body>
+        Insert String: <input type="text" id="tinp" >
+        <br>
+        <br>
+        <hr>
+        <p id="myid"></p>
+    </body>
+</html>

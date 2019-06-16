@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <style>
+            
+            .myclass
+            { width: 200px;
+               height: 140px;
+                background: url("min1.jpg");
+                position: relative;
+                margin: 200px auto 0;
+
+            }
+        </style>
+        <script src="./script/jquery-3.4.0.js"></script>
+        <script>
+        $(document).keydown(function(e){
+    switch (e.which){
+    case 37:    //left arrow key
+        $(".myclass").finish().animate({
+            left: "-=50"
+        });
+        break;
+    case 38:    //up arrow key
+        $(".myclass").finish().animate({
+            top: "-=50"
+        });
+        break;
+    case 39:    //right arrow key
+        $(".myclass").finish().animate({
+            left: "+=50"
+        });
+        break;
+    case 40:    //bottom arrow key
+        $(".myclass").finish().animate({
+            top: "+=50"
+        });
+        break;
+    }
+});
+        
+        </script>
+
+    </head>
+    <body>
+ 		<h3 style="text-align:center"> Use arrow keywords for picture movement</h3>     
+       <div class="myclass"></div>
+    </body>
+</html>
